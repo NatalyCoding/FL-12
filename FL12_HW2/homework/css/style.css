@@ -3,3 +3,13 @@
 write your code here
 
 */
+
+@media-print {}
+
+.tm-nav-item:hover {
+    background-color: lightskyblue;
+}
+
+.tm-nav-item-link:hover {
+    color: #fff;
+}
