@@ -22,3 +22,12 @@ write your code here
     background: #ffffff;
     text-shadow: #333333 4px 4px 2px;
 }
+
+.tm-content-box.flex-2-col {
+    display: flex;
+    align-items: center;
+}
+
+.tm-team-description-container h2 {
+    text-align: center;
+}
