@@ -13,3 +13,12 @@ write your code here
 .tm-nav-item-link:hover {
     color: #fff;
 }
+
+.tm-banner {
+    background: linear-gradient(to right, lightskyblue, burlywood);
+}
+
+.tm-banner-inner {
+    background: white;
+    text-shadow: #333 4px 4px 2px;
+}
