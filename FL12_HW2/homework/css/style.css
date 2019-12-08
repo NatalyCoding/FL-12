@@ -7,18 +7,18 @@ write your code here
 @media-print {}
 
 .tm-nav-item:hover {
-    background-color: lightskyblue;
+    background-color: #87CEFA;
 }
 
 .tm-nav-item-link:hover {
-    color: #fff;
+    color: #ffffff;
 }
 
 .tm-banner {
-    background: linear-gradient(to right, lightskyblue, burlywood);
+    background: linear-gradient(to right, #87CEFA, #deb887);
 }
 
 .tm-banner-inner {
-    background: white;
-    text-shadow: #333 4px 4px 2px;
+    background: #ffffff;
+    text-shadow: #333333 4px 4px 2px;
 }
