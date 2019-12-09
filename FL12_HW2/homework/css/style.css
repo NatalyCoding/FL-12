@@ -72,3 +72,17 @@ write your code here
     word-spacing: 10px;
     font-style: italic;
 }
+
+.box-work {
+    padding: 7px;
+}
+
+.box-work:nth-child(odd) {
+    background-color: #87cefa;
+    color: #ffffff;
+}
+
+.box-work:nth-child(even) {
+    background-color: #ffffff;
+    color: #000000;
+}
