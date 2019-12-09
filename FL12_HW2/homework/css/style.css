@@ -62,3 +62,13 @@ write your code here
 .heading ol li {
     list-style: lower-alpha;
 }
+
+.tm-team-description-container h2 {
+    text-align: left;
+}
+
+.tm-team-description-container .tm-section-description:last-child {
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    font-style: italic;
+}
