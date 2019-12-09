@@ -121,3 +121,11 @@ write your code here
         background: url(../img/email-icon.png) right 10px bottom 10px no-repeat;
         background-size: 4%;
     }
+    
+    .submit-btn {
+        background-color: #ffffff;
+        border: 1px solid #87cefa;
+        color: #87cefa;
+        float: right;
+        padding: 15px 25px;
+    }
