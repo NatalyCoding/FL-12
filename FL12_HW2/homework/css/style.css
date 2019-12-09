@@ -86,3 +86,7 @@ write your code here
     background-color: #ffffff;
     color: #000000;
 }
+
+.box-work p::first-letter {
+    font-weight: bold;
+}
