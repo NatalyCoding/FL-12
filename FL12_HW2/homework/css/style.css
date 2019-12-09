@@ -53,3 +53,12 @@ write your code here
     color: #87cefa;
     font-style: italic;
 }
+
+.heading h2 {
+    text-align: center;
+    color: #87cefa;
+}
+
+.heading ol li {
+    list-style: lower-alpha;
+}
