@@ -196,7 +196,6 @@ write your code here
                 }
                 .heading li .text::after {
                     content: "";
-                    color: #ffffff;
                 }
                 .heading ol>li:nth-child(even) {
                     display: flex;
