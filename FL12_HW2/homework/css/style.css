@@ -109,6 +109,10 @@ write your code here
         line-height: 30px;
     }
     
+    .tm-section-description {
+        text-indent: 25px;
+    }
+    
     #contact input {
         border-top: none;
         border-left: none;
