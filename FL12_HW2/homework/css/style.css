@@ -67,8 +67,8 @@ write your code here
             
             .heading li .text::after {
                 content: "New";
-                color: red;
-                background-color: white;
+                color: #ff0000;
+                background-color: #ffffff;
                 font-size: 10px;
                 font-weight: bold;
                 display: inline-block;
@@ -183,6 +183,10 @@ write your code here
                 }
                 .heading ol {
                     list-style: none;
+                }
+                .heading li .text::after {
+                    content: "";
+                    color: #ffffff;
                 }
                 .tm-section-description:last-child {
                     letter-spacing: normal;
