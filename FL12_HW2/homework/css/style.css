@@ -4,41 +4,6 @@ write your code here
 
 */
             
-            @media print {
-                .tm-sidebar,
-                .tm-team-img,
-                .boxes,
-                .carousel-indicators,
-                .img-contact-us,
-                section::before,
-                #contact {
-                    display: none;
-                }
-                body,
-                .container,
-                .tm-main-content,
-                .tm-content-box,
-                .padding-medium,
-                .carousel,
-                footer {
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    margin: 0;
-                }
-                h2 {
-                    text-transform: uppercase;
-                    text-align: center;
-                }
-                .heading ol {
-                    list-style: none;
-                }
-                .tm-section-description:last-child {
-                    letter-spacing: normal;
-                    word-spacing: normal;
-                    font-style: normal;
-                }
-            }
-            
             .tm-nav-item:hover {
                 background-color: #87cefa;
             }
@@ -183,4 +148,45 @@ write your code here
                 content: "";
                 border-top: 45px solid #87cefa;
                 border-right: 45px solid transparent;
+            }
+            
+            @media print {
+                .tm-sidebar,
+                .tm-team-img,
+                .boxes,
+                .carousel-indicators,
+                .img-contact-us,
+                section::before,
+                #contact {
+                    display: none;
+                }
+                body,
+                .container,
+                .tm-main-content,
+                .tm-content-box,
+                .padding-medium,
+                .carousel,
+                footer {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    margin: 0;
+                }
+                .tm-section-title,
+                .tm-section-description,
+                .tm-team-description-container {
+                    max-width: 100%;
+                    text-align: center;
+                }
+                h2 {
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+                .heading ol {
+                    list-style: none;
+                }
+                .tm-section-description:last-child {
+                    letter-spacing: normal;
+                    word-spacing: normal;
+                    font-style: normal;
+                }
             }
