@@ -27,10 +27,10 @@ write your code here
                 }
                 h2 {
                     text-transform: uppercase;
+                    text-align: center;
                 }
                 .heading ol {
                     list-style: none;
-                    text-align: center;
                 }
                 .tm-section-description:last-child {
                     letter-spacing: normal;
