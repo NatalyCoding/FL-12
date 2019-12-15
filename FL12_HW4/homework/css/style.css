@@ -1,0 +1,51 @@
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 900px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+
+.header-wrap {
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #000000;
+}
+
+a:hover,
+a:active {
+    color: #bfba55;
+}
+
+.logo p {
+    text-transform: capitalize;
+}
+
+ul,
+li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 20px;
+}
