@@ -1,159 +1,210 @@
-            // Write your styles here
-            // Write your styles here
-            @mixin logo($color, $font) {
+// Write your styles here
+// Write your styles here
+@mixin logo($color, $font) {
+    display: flex;
+    align-items: center;
+    img {
+        height: 45px;
+        width: 45px;
+    }
+    p {
+        font-size: 22px;
+        line-height: 20px;
+        width: 80px;
+        text-align: center;
+        color: $color;
+        font-family: $font;
+        span {
+            display: block;
+            font-size: 12px;
+        }
+    }
+}
+
+@mixin highlited($color, $width, $height, $left, $bottom) {
+    position: relative;
+    z-index: 1;
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $color;
+        z-index: -1;
+        width: $width;
+        height: $height;
+        left: $left;
+        bottom: $bottom;
+    }
+}
+
+@mixin button($color) {
+    background-color: $color;
+    padding: 12px 34px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 5%;
+}
+
+%flexy {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: $contentBackground;
+    color: $textLight;
+    font-family: $mainFont;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.header {
+    background-image: $headerBackground;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 50% 0;
+    .header-wrap {
+        width: 460px;
+        height: 530px;
+        margin-left: 10%;
+        .landing-logo {
+            @include logo($textMainColor, $secondFont);
+        }
+        .header_heading {
+            color: $textMainColor;
+            font-size: 55px;
+            font-weight: bold;
+            line-height: 55px;
+            margin-top: 20px;
+            @include highlited($textHighlited, 232px, 36px, 0, 2px);
+        }
+        .header_text {
+            color: $textMainColor;
+            font-family: $secondFont;
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 50px;
+        }
+        .header_button {
+            @include button($buttonBackground);
+        }
+        .login {
+            color: $textLight;
+            padding-left: 60px;
+            font-weight: 600;
+        }
+    }
+}
+
+main {
+    @extend %flexy;
+    flex-direction: column;
+    .section_text {
+        font-size: 36px;
+        font-weight: 900;
+        color: $textMainColor;
+        @include highlited($textHighlited, 164px, 40px, 190px, 7px);
+    }
+    .section_card_wrap {
+        display: flex;
+        flex-direction: column;
+        .section_card {
+            @extend %flexy;
+            justify-content: space-between;
+            box-sizing: border-box;
+            width: 860px;
+            height: auto;
+            background-color: $cardsBackground;
+            padding: 15px;
+            margin: 8px;
+            border-radius: 5px;
+            img {
+                min-width: 350px;
+                border-radius: 5px;
+            }
+            .section_card_right_container {
                 display: flex;
-                align-items: center;
-                img {
-                    height: 45px;
-                    width: 45px;
-                }
-                p {
-                    font-size: 22px;
-                    width: 80px;
-                    text-align: center;
-                    color: $color;
-                    font-family: $font;
-                    span {
-                        display: block;
-                        font-size: 12px;
-                    }
-                }
-            }
-            
-            @mixin highlited($color, $width, $height, $left, $bottom) {
-                position: relative;
-                z-index: 1;
-                &:after {
-                    content: '';
-                    position: absolute;
-                    background-color: $color;
-                    z-index: -1;
-                    width: $width;
-                    height: $height;
-                    left: $left;
-                    bottom: $bottom;
-                }
-            }
-            
-            @mixin button($color) {
-                background-color: $color;
-                padding: 12px 34px;
-                font-weight: 600;
-                color: white;
-                border: none;
-                border-radius: 5%;
-            }
-            
-            %flexy {
-                display: flex;
-                align-items: center;
-            }
-            
-            body {
-                padding: 0;
-                margin: 0;
-                background: $contentBackground;
-                color: $textLight;
-                font-family: $mainFont;
-            }
-            
-            main {
-                margin: 0 auto;
-                max-width: 960px;
-            }
-            
-            .header {
-                background-image: $headerBackground;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                border-radius: 0 0 50% 0;
-                .header-wrap {
-                    width: 460px;
-                    height: 530px;
-                    margin-left: 10%;
-                    .landing-logo {
-                        @include logo($textMainColor, $secondFont);
-                    }
-                    .header_heading {
-                        color: $textMainColor;
-                        font-size: 55px;
-                        font-weight: bold;
-                        line-height: 55px;
-                        margin-top: 20px;
-                        @include highlited($textHighlited, 232px, 36px, 0, 2px);
-                    }
-                    .header_text {
-                        color: $textMainColor;
-                        font-family: $secondFont;
-                        font-size: 14px;
-                        line-height: 14px;
-                        margin-bottom: 50px;
-                    }
-                    .header_button {
-                        @include button($buttonBackground);
-                    }
-                    .login {
-                        color: $textLight;
-                        padding-left: 60px;
-                        font-weight: 600;
-                    }
-                }
-            }
-            
-            main {
-                @extend %flexy;
                 flex-direction: column;
-                .section_text {
-                    font-size: 36px;
+                align-items: center;
+                justify-content: space-around;
+                padding: 20px 0;
+                margin: 0 auto;
+                box-sizing: border-box;
+                height: inherit;
+                width: 350px;
+                .section_card_heading {
+                    color: white;
+                    font-size: 20px;
                     font-weight: 900;
-                    color: $textMainColor;
-                    @include highlited($textHighlited, 164px, 40px, 190px, 7px);
                 }
-                .section_card_wrap {
-                    display: flex;
-                    flex-direction: column;
-                    .section_card {
-                        @extend %flexy;
-                        justify-content: space-between;
-                        box-sizing: border-box;
-                        width: 860px;
-                        height: auto;
-                        background-color: $cardsBackground;
-                        padding: 15px;
-                        margin: 8px;
-                        border-radius: 5px;
-                        img {
-                            min-width: 350px;
-                            border-radius: 5px;
-                        }
-                        .section_card_right_container {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: space-around;
-                            padding: 20px 0;
-                            margin: 0 auto;
-                            box-sizing: border-box;
-                            height: inherit;
-                            width: 350px;
-                            .section_card_heading {
-                                color: white;
-                                font-size: 20px;
-                                font-weight: 900;
-                            }
-                            .section_card_text {
-                                font-family: $secondFont;
-                                font-size: 14px;
-                                line-height: 14px;
-                                margin: 0 0 8px 0;
-                                text-align: justify;
-                            }
-                            .section_link {
-                                color: $textLight;
-                                font-weight: 600;
-                            }
-                        }
-                    }
+                .section_card_text {
+                    font-family: $secondFont;
+                    font-size: 14px;
+                    line-height: 14px;
+                    margin: 0 0 8px 0;
+                    text-align: justify;
+                }
+                .section_link {
+                    color: $textLight;
+                    font-weight: 600;
                 }
             }
+        }
+    }
+}
+
+.section_banner {
+    @extend %flexy;
+    justify-content: space-around;
+    width: 900px;
+    padding: 30px;
+    background: $gradient;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-bottom: -60px;
+    .section_banner_heading {
+        color: $textMainColor;
+        font-size: 20px;
+        font-weight: 900;
+        margin-bottom: 10px;
+        @include highlited($textHighlited, 50px, 30px, 80px, 0);
+    }
+    .section_banner_text {
+        color: $textLight;
+        font-family: $secondFont;
+        font-size: 14px;
+        margin: 10px 0 0 0;
+    }
+    button {
+        @include button($buttonBackground);
+    }
+}
+
+.footer {
+    .footer-wrap {
+        @extend %flexy;
+        justify-content: space-around;
+        width: 100%;
+        height: 150px;
+        background-color: $footerBackground;
+        font-family: $secondFont;
+        color: $textLight;
+        padding-top: 60px;
+        .footer_logo {
+            @include logo($textLight, $secondFont);
+        }
+        .footer_text {
+            width: 300px;
+            font-size: 12px;
+        }
+        .footer-cr {
+            font-size: 12px;
+        }
+    }
+}
