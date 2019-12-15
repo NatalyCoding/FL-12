@@ -1,5 +1,4 @@
 // Write your styles here
-// Write your styles here
 @mixin logo($color, $font) {
     display: flex;
     align-items: center;
@@ -49,6 +48,8 @@
     display: flex;
     align-items: center;
 }
+
+$font-weights: ("regular": 400, "medium": 500, "bold": 900);
 
 body {
     padding: 0;
