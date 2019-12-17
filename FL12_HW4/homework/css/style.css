@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-    max-width: 1420px;
+    max-width: 1040px;
     margin: 0 auto;
 }
 
@@ -89,4 +89,40 @@ li {
     border: none;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.blog-section {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-wrapper {
+    max-width: 850px;
+}
+
+.blog-image {
+    width: 850px;
+    margin-top: 50px;
+}
+
+.blog-section h2 {
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+p.blog-entry {
+    font: 14px;
+    line-height: 1.5;
+}
+
+.blog-btn {
+    margin: 16px 0;
+    color: #777777;
+    padding: 13px 25px;
+    border-radius: 25px;
+    border: 1px #777777 solid;
+    background: #ffffff;
 }
