@@ -13,14 +13,17 @@ body {
 }
 
 .header-wrap {
-    max-width: 1420px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
 .top-nav {
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+    max-width: 1420px;
+    margin: 0 auto;
 }
 
 .menu {
@@ -40,7 +43,7 @@ a:active {
 }
 
 .logo p {
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 ul,
@@ -48,4 +51,42 @@ li {
     list-style: none;
     display: inline-block;
     padding-left: 20px;
+}
+
+.header-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/home-bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-heading {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.header-text {
+    color: #bfba55;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+.header-button {
+    display: block;
+    width: 150px;
+    height: 35px;
+    background-color: #ffffff;
+    color: #777777;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
