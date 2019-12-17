@@ -109,12 +109,12 @@ li {
 }
 
 .blog-section h2 {
-    padding-top: 10px;
-    margin-bottom: 0;
+    font-size: 30px;
+    padding: 10px 0 2px;
 }
 
-p.blog-entry {
-    font: 14px;
+.blog-section p.blog-entry {
+    font-size: 18px;
     line-height: 1.5;
 }
 
@@ -125,4 +125,24 @@ p.blog-entry {
     border-radius: 25px;
     border: 1px #777777 solid;
     background: #ffffff;
+}
+
+.blog-statistics {
+    display: flex;
+}
+
+.author-img {
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 4px;
+}
+
+.blog-author,
+.blog-data,
+.blog-comments {
+    padding-left: 15px;
+}
+
+.blog-comments {
+    display: flex;
 }
