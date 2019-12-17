@@ -146,3 +146,32 @@ li {
 .blog-comments {
     display: flex;
 }
+
+footer {
+    background: #000000;
+    color: #ffffff;
+}
+
+.footer-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.footer-column:first-child {
+    width: 390px;
+    margin-right: 135px;
+}
+
+.footer-header {
+    font: 14px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.footer-text {
+    color: #777;
+    line-height: 1.5;
+}
