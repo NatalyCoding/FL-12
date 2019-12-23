@@ -1,6 +1,6 @@
-let a = prompt('Enter value for A'),
-    b = prompt('Enter value for B'),
-    c = prompt('Enter value for C');
+let a = parseInt(prompt('Enter value for A')),
+    b = parseInt(prompt('Enter value for B')),
+    c = parseInt(prompt('Enter value for C'));
 if (isNaN(a || b || c) === true) {
     console.log('Invalid input data');
 }
