@@ -14,13 +14,17 @@ if (email.length < checkPasswLength) {
 } else if (email === 'userEmail' || email === 'adminEmail') {
     passw = prompt('Enter your password', '');
     if (email === 'userEmail' && passw === 'userPassw' || email === 'adminEmail' && passw === 'adminPassw') {
-        confirm('Do you want to change your password?', '');
+        changePassw = confirm('Do you want to change your password?', '');
+        if (changePassw === true) {
+            console.log('change!');
+        } else {
+            alert('You have failed the change!');
+        }
     } else if (passw === '' || passw === null) {
         alert('Canceled');
     } else {
         alert('Wrong password');
     }
-
 } else {
     alert('I don\'t know you');
 }
