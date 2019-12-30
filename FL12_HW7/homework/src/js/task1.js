@@ -21,6 +21,18 @@ if (email.length < checkPasswLength) {
                 alert('Canceled.');
             } else if (oldPassw === passw) {
                 newPassw = prompt('Enter new password', '');
+                if (newPassw === '' || newPassw === null) {
+                    alert('Canceled');
+                } else if (newPassw.length < checkPasswLength) {
+                    alert('It\'s too short password. Sorry.');
+                } else {
+                    confirmPassw = prompt('Repeat new password, please', '');
+                    if (confirmPassw === newPassw) {
+                        alert('You have successfully changed your password.');
+                    } else {
+                        alert('You wrote the wrong password.');
+                    }
+                }
             } else {
                 alert('Wrong password!');
             }
