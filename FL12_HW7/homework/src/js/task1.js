@@ -16,7 +16,14 @@ if (email.length < checkPasswLength) {
     if (email === 'userEmail' && passw === 'userPassw' || email === 'adminEmail' && passw === 'adminPassw') {
         changePassw = confirm('Do you want to change your password?', '');
         if (changePassw === true) {
-            console.log('change!');
+            oldPassw = prompt('Enter old password', '');
+            if (oldPassw === '' || oldPassw === null) {
+                alert('Canceled.');
+            } else if (oldPassw === passw) {
+                newPassw = prompt('Enter new password', '');
+            } else {
+                alert('Wrong password!');
+            }
         } else {
             alert('You have failed the change!');
         }
