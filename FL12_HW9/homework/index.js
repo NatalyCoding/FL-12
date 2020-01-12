@@ -17,4 +17,17 @@ function convert(arr) {
 
 let myarr = ['1', 2, 3, '4'];
 convert(myarr);
-console.log(convert(myarr));
+
+/// 2 ///
+function executeforEach(array, callback) {
+    for (let value of array) {
+        callback(value);
+    }
+}
+
+/// 3 ///
+function mapArray(array, callback) {
+    let resultArray = [];
+    executeforEach(array, value => resultArray.push(callback(parseInt(value))));
+    return resultArray;
+}
