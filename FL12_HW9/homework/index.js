@@ -31,3 +31,15 @@ function mapArray(array, callback) {
     executeforEach(array, value => resultArray.push(callback(parseInt(value))));
     return resultArray;
 }
+
+/// 4 ///
+function filterArray(array, callback) {
+    let filteredArr = [];
+    executeforEach(array, function(el) {
+        let n = 2;
+        if (el % n === 0) {
+            filteredArr.push(callback(el));
+        }
+    });
+    return filteredArr;
+}
