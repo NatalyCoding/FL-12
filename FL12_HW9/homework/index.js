@@ -1,1 +1,20 @@
-// Your code goes here
+function convert(arr) {
+    let arg;
+    let convertedArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'string') {
+            arg = Number(arr[i]);
+            convertedArr.push(arg);
+        } else if (typeof arr[i] === 'number') {
+            arg = String(arr[i]);
+            convertedArr.push(arg);
+        }
+
+    }
+
+    return convertedArr;
+}
+
+let myarr = ['1', 2, 3, '4'];
+convert(myarr);
+console.log(convert(myarr));
