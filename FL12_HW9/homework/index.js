@@ -43,3 +43,12 @@ function filterArray(array, callback) {
     });
     return filteredArr;
 }
+
+/// 5 ///
+function flipOver(str) {
+    let reverseStr = '';
+    for (let i of str) {
+        reverseStr = i + reverseStr;
+    }
+    return reverseStr;
+}
