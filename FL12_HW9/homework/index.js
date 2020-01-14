@@ -15,9 +15,6 @@ function convert(arr) {
     return convertedArr;
 }
 
-let myarr = ['1', 2, 3, '4'];
-convert(myarr);
-
 /// 2 ///
 function executeforEach(array, callback) {
     for (let value of array) {
@@ -60,4 +57,24 @@ function makeListFromRange([num1, num2]) {
         arr.push(i);
     }
     return arr;
+}
+
+/// 7 ///
+function getArreyOfKeys(array, key) {
+    const resultArr = [];
+    executeforEach(array, value => resultArr.push(value[key]));
+    return resultArr;
+}
+
+/// 8 ///
+function substitute(array) {
+    let newArray = [];
+    mapArray(array, function(el) {
+        let n = 30;
+        if (el < n) {
+            el = '*';
+        }
+        newArray.push(el);
+    });
+    return newArray;
 }
