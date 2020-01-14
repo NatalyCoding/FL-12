@@ -78,3 +78,23 @@ function substitute(array) {
     });
     return newArray;
 }
+
+/// 9 ///
+function getPastDay(date, number) {
+    const h = 24;
+    const m = 60;
+    const s = 60;
+    const mi = 1000;
+    const millisecInOneDay = h * m * s * mi;
+    return new Date(date.getTime() - number * millisecInOneDay).getDate();
+}
+
+/// 10 ///
+function formatDate(date) {
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+    let hour = date.getHours() > 9 ? date.getHours() : `0${date.getHours()}`;
+    let min = date.getMinutes() > 9 ? date.getMinutes() : `0${date.getMinute()}`;
+    return `${year}/${month}/${day} ${hour}/${min}`;
+}
