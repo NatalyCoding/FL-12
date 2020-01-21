@@ -52,3 +52,27 @@ function Fighter({ name, damage, strength, agility, health }) {
         }
     }
 }
+
+
+function battle(fighter1, fighter2) {
+    if (fighter1.getHealth() === 0) {
+        console.log(`${fighter1.getName()} is dead and can't fight.`);
+    } else if (fighter2.getHealth() === 0) {
+        console.log(`${fighter2.getName()} is dead and can't fight.`)
+    } else {
+        let round = 1;
+        let two = 2;
+        while (fighter1.getHealth() && fighter2.getHealth() !== 0) {
+            round++ % two === 0 ? fighter2.attack(fighter1) : fighter1.attack(fighter2);
+        }
+        if (fighter1.getHealth() === 0) {
+            console.log(`${fighter2.getName()} has won!`);
+            fighter2.addWin();
+            fighter1.addLoss();
+        } else {
+            console.log(`${fighter1.getName()} has won!`);
+            fighter1.addWin();
+            fighter2.addLoss();
+        }
+    }
+}
