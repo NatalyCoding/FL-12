@@ -45,7 +45,7 @@ function Fighter({ name, damage, strength, agility, health }) {
             let random = Math.floor(Math.random() * maxChance);
             if (probability > random) {
                 defend.dealDamage(damage);
-                console.log(`${name} makes ${damage} damage to ${defend.getName()}`)
+                console.log(`${name} makes ${damage} damage to ${defend.getName()}`);
             } else {
                 console.log(`${name} attack missed`);
             }
@@ -58,7 +58,7 @@ function battle(fighter1, fighter2) {
     if (fighter1.getHealth() === 0) {
         console.log(`${fighter1.getName()} is dead and can't fight.`);
     } else if (fighter2.getHealth() === 0) {
-        console.log(`${fighter2.getName()} is dead and can't fight.`)
+        console.log(`${fighter2.getName()} is dead and can't fight.`);
     } else {
         let round = 1;
         let two = 2;
