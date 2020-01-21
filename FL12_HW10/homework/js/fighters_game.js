@@ -37,6 +37,18 @@ function Fighter({ name, damage, strength, agility, health }) {
             if (health < 0) {
                 health = 0;
             }
+        },
+
+        attack: function(defend) {
+            let maxChance = 100;
+            let probability = maxChance - (strength + agility);
+            let random = Math.floor(Math.random() * maxChance);
+            if (probability > random) {
+                defend.dealDamage(damage);
+                console.log(`${name} makes ${damage} damage to ${defend.getName()}`)
+            } else {
+                console.log(`${name} attack missed`);
+            }
         }
     }
 }
