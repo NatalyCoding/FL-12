@@ -9,6 +9,8 @@ function Fighter({ name, damage, strength, agility, health }) {
     let wins = 0;
     let losses = 0;
 
+    const maxHealth = 100;
+
     return {
 
         getName: () => name,
@@ -21,6 +23,20 @@ function Fighter({ name, damage, strength, agility, health }) {
 
         logCombatHistory: function() {
             console.log(`Name: ${name}, Wins: ${wins}, Losses: ${losses}`);
+        },
+
+        heal: function(heal) {
+            health += heal;
+            if (health > maxHealth) {
+                health = maxHealth;
+            }
+        },
+
+        dealDamage: function(madeDamage) {
+            health -= madeDamage;
+            if (health < 0) {
+                health = 0;
+            }
         }
     }
 }
